@@ -1,0 +1,36 @@
+java subway -b 洪湖里 复兴路 -map subway.txt -o routine.txt
+java subway -a 1号线 -map subway.txt -o station.txt
+
+
+
+test
+
+java subway -b 洪湖里 刘园 -map subway.txt -o routine.txt
+java subway -a 4号线 -map subway.txt -o station.txt
+java subway -a 3号线 -map subway.txt -o station.txt
+java subway -b 华苑 乐园道 -map subway.txt -o routine.txt
+
+
+1.map 后没有参数信息
+java subway -b 洪湖里 复兴路 -map
+
+2.缺少输出文件信息
+java subway -b 洪湖里 复兴路 -map subway.txt -o
+
+3.缺少起点或终点信息
+java subway -b 华苑  -map subway.txt -o routine
+
+4.查询的地铁线路不存在
+java subway -a 天府广场 -map subway.txt -o station.txt
+
+5.查询的地铁起点或终点站不存在
+java subway -b 天府广场 复兴路 -map subway.txt -o routine.txt
+
+6.查询指定地铁线路并输出到station.txt
+java subway -a 3号线 -map subway.txt -o station.txt
+
+7.查询的起点终点在同一条地铁线上
+java subway -b 刘园 西北角 -map subway.txt -o routine.txt
+
+8.查询的起点终点不在同一条地铁线上
+java subway -b 果酒厂 咸阳路 -map subway.txt -o routine.txt
